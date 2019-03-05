@@ -6,7 +6,7 @@ COPY . /app
 WORKDIR /app
 
 RUN apt-get install python3-pip -y
-RUN pip3 install -r requirements.txt
+#RUN pip3 install -r requirements.txt
 RUN apt-get install default-jdk -y
 RUN apt-get install openjdk-8-jre -y
 RUN apt-get update
@@ -15,6 +15,6 @@ RUN echo  "deb  http://packages.elastic.co/elasticsearch/2.x/debian stable main"
 RUN apt-get update &&  apt-get install elasticsearch -y
 ENTRYPOINT ["python"]
 
-CMD ["python driver.py"]
+#CMD ["python driver.py"]
 EXPOSE 9200
 EXPOSE 5000
