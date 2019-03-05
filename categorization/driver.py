@@ -10,9 +10,6 @@ from pprint import pprint
 
 app = Flask(__name__)
 
-with open('query_cate_dict.json') as f:
-    data = json.load(f)
-
 #pprint(data)
 
 @app.route('/')
