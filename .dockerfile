@@ -4,6 +4,7 @@ RUN apt-get update -y
 RUN apt-get install -y python3.7
 COPY . /app
 WORKDIR /app
+RUN apt-get install python3-pip
 RUN pip3 install -r ./categorization/requirements.txt
 RUN apt-get install default-jdk -y
 RUN apt-get install openjdk-8-jre -y
