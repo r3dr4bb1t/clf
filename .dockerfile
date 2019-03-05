@@ -13,6 +13,6 @@ RUN echo  "deb  http://packages.elastic.co/elasticsearch/2.x/debian stable main"
 RUN apt-get update &&  apt-get install elasticsearch -y
 ENTRYPOINT ["python"]
 
-CMD ["driver.py"]
+CMD ["python driver.py"]
 EXPOSE 9200
-EXPOSe 5000
+EXPOSE 5000
