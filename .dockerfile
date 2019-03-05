@@ -12,12 +12,12 @@ RUN apt-get install wget -y
 RUN apt-get update
 
 RUN wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add -
-RUN apt install apt-transport-https
+RUN apt-get install apt-transport-https
 RUN echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | tee -a /etc/apt/sources.list.d/elastic-5.x.list
 RUN apt-get update &&  apt-get install elasticsearch -y
 #RUN apt-get install systemd
-#RUN systemctl start elasticsearch.service
-
-#CMD ["python ~/app/categorization/driver.py"]
+#RUN systemctl service elasticsearch start
+RUN service elasticsearch start
+#CMD ["python3 /categorization/driver.py"]
 EXPOSE 9200
 EXPOSE 5000
