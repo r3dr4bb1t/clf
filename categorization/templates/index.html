@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        갓즈니
+    </title>
+</head>
+<body>
+    <h1> 갓즈니 Categorization </h1>
+    <br>
+    <form method="POST" action="/crawl">
+        <h3> 크롤링 시작! (3~5분 소요)</br></h3>
+        <input type="submit" name="submit_button1" value="Crawl">
+    <br><br><hr>
+    </form>
+    <form method="POST" action="/categorize">
+        <h3> Category 추가! </h3>
+        <input type="submit" name="submit_button2" value="Categorize">
+    </form>
+    <form method="POST" action="/indexing">
+        <h3> 인덱싱 시작!(hscate) </h3>
+        <input type="submit" name="submit_button3" value="Indexing">
+    </form>
+
+    <form method="DELETE" action="/delete_index">
+        <h3> 인덱스 삭제 </h3>
+        <input type="submit" name="submit_button4" value="Delete Index">
+    </form>
+    <br><br><hr>
+    <form method="POST" action="/query">
+        <h3> 쿼리를 입력하세요</h3>
+        <input name="text">
+        <input type="submit"></input>
+    </form>
+</body>
+</html>
