@@ -16,10 +16,10 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/crawl',methods=['POST'])
-def crawl():
-    os.system('cd hscrawler && scrapy crawl hsSpider')
-    return 'Crawled successfully, Check ./hscrawler/hs.csv !'
+#@app.route('/crawl',methods=['POST'])
+#def crawl():
+ #   os.system('scrapy crawl hsSpider')
+  #  return 'Crawled successfully, Check ./hscrawler/hs.csv !'
 
 @app.route('/categorize',methods=['POST'])
 def cate():
@@ -48,4 +48,4 @@ def query():
 
 if __name__ == '__main__':
     app.debug = True
-    app.run()
+    app.run(host= '0.0.0.0')

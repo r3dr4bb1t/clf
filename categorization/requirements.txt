@@ -5,3 +5,4 @@ numpy
 elasticsearch
 keras
 flask
+scrapy
